@@ -1,0 +1,23 @@
+//trocar valores de coluna por coluna
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int matriz[3][3]={{1,2,3},
+                    {4,5,6},
+                    {7,8,9}};
+    int aux;
+
+    for(int i=0;i<3;i++){
+        aux=matriz[i][0];
+        matriz[i][0]=matriz[i][1];
+        matriz[i][1]=aux;
+    }
+
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("%d",matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
